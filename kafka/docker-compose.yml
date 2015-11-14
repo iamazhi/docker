@@ -1,0 +1,14 @@
+zookeeper:
+  image: dockerhub:5000/zookeeper
+  ports:
+    - "2181:2181"
+kafka:
+  image: dockerhub:5000/kafka
+  ports:
+    - "9092:9092"
+  links:
+    - zookeeper:zk
+  environment:
+    KAFKA_ADVERTISED_HOST_NAME: 54.223.50.155
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
