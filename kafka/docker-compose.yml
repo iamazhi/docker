@@ -12,3 +12,4 @@ kafka:
     KAFKA_ADVERTISED_HOST_NAME: 54.223.52.13
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
+    - /home/kafka/data:/kafka
