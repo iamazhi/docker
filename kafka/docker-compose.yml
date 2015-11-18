@@ -9,7 +9,7 @@ kafka:
   links:
     - zookeeper:zk
   environment:
-    KAFKA_ADVERTISED_HOST_NAME: 54.223.52.13
+    KAFKA_ADVERTISED_HOST_NAME: localhost
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     - /home/kafka/data:/kafka
