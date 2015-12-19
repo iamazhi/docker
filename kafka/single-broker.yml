@@ -1,0 +1,11 @@
+kafka:
+  image: dockerhub:5000/kafka
+  ports:
+    - "9092:9092"
+  environment:
+    KAFKA_ADVERTISED_HOST_NAME: 54.223.196.153
+    KAFKA_ZOOKEEPER_CONNECT: 54.223.50.155:2181
+    KAFKA_BROKER_ID: 2
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /home/kafka/data:/kafka
