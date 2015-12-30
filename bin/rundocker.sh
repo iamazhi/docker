@@ -6,7 +6,7 @@ docker restart php-fpm
 docker restart  tomcat-org 
 docker restart CAS 
 docker restart cgj_ui_server
-docker restart advanced 
+docker restart advanced_org_service 
 docker restart tomcat-jur-ui
 docker restart cgj_jurisdiction
 docker restart tomcat-org-ui
