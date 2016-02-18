@@ -1,10 +1,9 @@
 #! /bin/bash 
 docker restart tomcat-avatar 
 docker restart token-service  
-docker restart nginx  
 docker restart php-fpm 
-docker restart  tomcat-org 
-docker restart CAS 
+docker restart nginx
+docker restart tomcat-org 
 docker restart cgj_ui_server
 docker restart advanced_org_service 
 docker restart tomcat-jur-ui
