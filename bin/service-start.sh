@@ -6,7 +6,7 @@ docker run --name=tomcat-avatar -v /home/java/webapps/cash-avatar:/home/tomcat/w
 docker rm -f token-service
 docker run --restart=always --name=token-service -ti -v /home/golang/token-service:/home/goProjects -v /home/golang/gopath:/go -v /etc/localtime:/etc/localtime -w /home/goProjects/src/token-service -p 8777:8777  -d dockerhub:5000/golang ./ok.sh
 docker rm -f cgj_ui_server
-docker run --restart=always -p 4000:4000 -it --name=cgj_ui_server -v /home/nodejs/cgj_ui_server:/home/cgj_ui_server -w /home/cgj_ui_server -d  dockerhub:5000/node ./run.sh
+docker run --restart=always -p 4000:4000 -it --name=cgj_ui_server -v /home/nodejs/cgj_ui_server:/home/cgj_ui_server -w /home/cgj_ui_server -d  dockerhub:5000/node nohup node bin/www
 docker rm -f advanced_org_service
 docker run --restart=always -p 6000:6000 -it --name=advanced_org_service -v /home/nodejs/advanced_org_service:/home/advanced_org_service -w /home/advanced_org_service  -d dockerhub:5000/node nohup node main.js &
 docker rm -f cgj_jurisdiction
