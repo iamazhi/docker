@@ -17,3 +17,5 @@ docker rm -f tomcat-org-ui
 docker run --restart=always --name=tomcat-org-ui -v /home/java/webapps/org-ui:/home/tomcat/webapps/demo -v /home/java/src/org-ui:/home/tomcat/src/demo -p 8989:8080 --add-host="localhost:172.17.42.1"  -ti -d dockerhub:5000/java ./home/tomcat/src/demo/docker.sh prod
 docker rm -f omnirest
 docker run --restart=always --name=omnirest -v /home/java/webapps/omnirest:/home/tomcat/webapps/ROOT -v /home/java/src/omnirest:/home/tomcat/src/demo -p 7070:8080 -ti -d   dockerhub:5000/tomcat_6 ./home/tomcat/src/demo/docker.sh csh/prod
+docker rm -f csh_new_job
+docker run --restart=always --name=csh_new_job -v /home/java/logs/csh_new_job:/home/tomcat/logs -v /home/java/src/csh_new_job:/home/tomcat/src/demo  -p 8850:8080 -ti -d dockerhub:5000/java ./home/tomcat/src/demo/run.sh prod
